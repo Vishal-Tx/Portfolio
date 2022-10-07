@@ -1,0 +1,90 @@
+
+
+<nav class="navbar navbar-expand-lg  position-fixed col-12">
+  <div class="container-fluid navbar-padding d-flex ">
+    <a class="navbar-brand d-flex " href="/"><img class="v-logo" src="/images/Vishal.png" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto ">
+        <a class="nav-link text-sm-center" aria-current="page" href="/#home">home</a>
+        <a class="nav-link text-sm-center" href="/#about-me">about-me</a>
+        <a class="nav-link text-sm-center" href="/#my-projects">projects</a>
+        <a class="nav-link text-sm-center" href="/#contact-me">contact me!</a>
+
+
+        <div class="nav-link">
+          <label class="toggle">
+            <input type="checkbox" onclick="myFunction()">
+            <span class="slider"></span>
+            <span class="labels" data-on="Light" data-off="Dark"></span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<script>
+  function myFunction() {
+    let element = document.body;
+    let element2 = document.querySelector(".navbar");
+    let element3 = document.querySelectorAll(".nav-link");
+    const socialLinks = document.querySelectorAll(".social-link");
+    const aboutMe = document.querySelector(".about-me");
+    const contactForm = document.querySelector(".contact-form")
+    let footer = document.querySelector(".footer")
+    const firstHeading = document.querySelectorAll(".firstHeading");
+    const projectCard = document.querySelectorAll(".my-project-card");
+    const footerLink = document.querySelector(".footer-link")
+    const pName = document.querySelectorAll(".pName")
+    pName.forEach(name => {
+      name.classList.toggle("pName-dark")
+    })
+
+    // const pHeading = document.querySelectorAll(".pHeading")
+    // pHeading.forEach(heading=>{
+    //   name.classList.toggle("pHeading-dark")
+    // })
+
+
+    // console.log('aboutMe', aboutMe)
+    // console.log('socialLink', socialLinks);
+    //   console.log("element3", element3)
+    element.classList.toggle("dark-mode-body");
+    element2.classList.toggle("dark-mode-navbar");
+    element3.forEach(ele => {
+      ele.classList.toggle("dark-mode-navbar-link")
+    })
+
+    socialLinks.forEach(link => {
+      link.classList.toggle("dark-mode-social-link")
+    })
+
+    footer.classList.toggle("footer-dark")
+  
+if(aboutMe){aboutMe.classList.toggle("dark-mode-project-card")}
+    
+if(contactForm){ contactForm.classList.toggle("dark-mode-project-card")}
+   
+
+    
+if(firstHeading){firstHeading.forEach(element => {
+      element.classList.toggle("dark-firstHeading")
+    })}
+    
+
+    if(projectCard){projectCard.forEach(card => {
+      card.classList.toggle("dark-mode-project-card")
+    })}
+
+    footerLink.classList.toggle("footer-link-dark")
+
+
+    
+  }
+</script>

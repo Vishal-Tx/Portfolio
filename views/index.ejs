@@ -1,0 +1,76 @@
+<% layout("layout/boilerplate") %>
+  <link rel="stylesheet" href="/stylesheets/font-mfizz.css">
+
+  
+
+  <section id="home">
+    <div class="tri-background col-xl-4 col-xxl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+      <div class="triangle-left"></div>
+    </div>
+    <div class="row section-intro content-margin">
+      <div class="firstHeading text-center text-lg-start col-xl-6 col-xxl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+        <p class="big-heading bold-font">Hello! I'm,</p>
+        <h1 class="intro-name">Vishal Gupta</h1>
+        <h3 class="big-heading bold-font">CREATIVE FULL STACK WEB DEVELOPER</h3>
+
+        <div class="action-button my-4">
+          <a title="Download Resume" class="btn" href="/images/Vishal Gupta_Resume.docx" role="button" download>Download
+            Resume</a>
+        </div>
+
+        <div class="social-links my-3 ">
+          <a title="Github" class="social-link" href="https://github.com/Vishal-Tx" target="_blank"><i
+              class="fa-brands fa-github fa-xl"></i></a>
+          <a title="Linkedin" class="social-link" href="https://linkedin.com/in/vishal-gupta-77339a195"
+            target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+          <a title="Instagram" class="social-link" href="" target="_blank"><i
+              class="fa-brands fa-instagram fa-xl"></i></a>
+        </div>
+      </div>
+
+
+      <div class=" profile-pic col-xl-6 col-xxl-6 col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+        <!-- <img class="profile-picture" src="/images/profilePic.jpg" alt="profile-pic"> -->
+        </div>
+
+    </div>
+  </section>
+
+
+  <%- include("./partials/about-me") %>
+
+    <%- include("./partials/skillSet") %>
+
+      <%- include("./partials/my-projects") %>
+
+      <%- include("./partials/contactMe") %>
+
+
+
+        <script>
+          const intro_name = document.querySelector('.intro-name');
+          console.log('intro_name***', intro_name);
+
+          a = intro_name.innerText.split("")
+          console.log('introt_name***.slice', a);
+          a.forEach(element => {
+            console.log(element)
+          });
+          intro_name.classList.toggle("zoom-name");
+// if(document.body.classList.includes("d-flex")){
+
+// console.log("found on the list")
+// }
+// else{
+//   console.log("not found anything");
+// }
+
+// console.log('document.body.classList', document.body.classList);
+
+    // const socialLinks = document.querySelectorAll(".social-link")
+    // console.log('socialLink', socialLinks);
+    // socialLinks.forEach(socialLink=>{
+    //   socialLink.classList.toggle("dark-mode-socialLinks")
+    // })
+
+        </script>

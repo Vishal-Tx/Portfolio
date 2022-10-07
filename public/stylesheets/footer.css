@@ -1,0 +1,16 @@
+.footer-link{
+    color: white;
+}
+
+.footer-link:hover{
+    color:black ;
+}
+
+.footer-link-dark{
+    color: rgb(109, 131, 242);
+}
+
+.footer-link-dark:hover{
+    color:white;
+   
+}

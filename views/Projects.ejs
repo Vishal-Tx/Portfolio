@@ -1,0 +1,39 @@
+<% layout("layout/boilerplate") %>
+
+<section id="my-projects">
+    <% projects.map(project=>{ %>
+      <div class="card my-project-card project-card-margin">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src= <%= project.image %>  class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body text-start">
+              <h5 class="card-title">
+                <%= project.title %>
+              </h5>
+              <p class="card-text">
+                <%= project.Description.slice(0, 120)+" ..." %> 
+              </p>
+              <p class="card-text">
+                <% for (const tech of project.Technologies) { %>
+                  <small class="text-muted">
+                    [<%= tech %>]
+                  </small>
+                  <%} %>
+              </p>
+              <div class="action-button">
+                <a title="About" class="btn btn-primary mx-1" href="/<%= project.title %>"
+                  style="text-decoration: none">About</a>
+                <a title="Live Demo" class="btn btn-primary mx-1" href="<%= project.liveSiteURL %>"
+                  style="text-decoration: none" target="_blank">Live Demo</a>
+                <a title="Github" class="btn btn-primary mx-1" href="<%= project.repoLink %>"
+                  style="text-decoration: none; border-radius: 50%" target="_blank"><i
+                    class="fa-brands fa-github fa-xl"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+  </section>

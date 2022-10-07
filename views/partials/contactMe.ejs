@@ -1,0 +1,61 @@
+<script src="/javascripts/validateForm.js" defer></script>
+<script src="https://smtpjs.com/v3/smtp.js" defer></script>
+
+<section id="contact-me">
+    <h2 class="about-me-heading fw-bold mb-4">Get in Touch</h2>
+    <div>
+        <div class="contact-form-wrapper d-flex justify-content-center">
+            <form action="https://formsubmit.co/vishalguptaTX@outlook.com" method="POST" class="contact-form needs-validation" novalidate >
+                <p class="description">Feel free to contact me if you need any assistance, any help or another question.
+                </p>
+                <div>
+                    <input id="name" name="name" type="text" class="form-control rounded border-white mb-3 form-input" 
+                        placeholder="Name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback mb-2">
+                        Please provide a name.
+                    </div>
+                </div>
+                <div>
+                    <input id="email" name="email" type="email" class="form-control rounded border-white mb-3 form-input" placeholder="Email"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback mb-2">
+                        Please provide your Email.
+                    </div>
+                </div>
+                <div>
+                    <textarea id="message" name="message" class="form-control rounded border-white mb-3 form-text-area" rows="5"
+                        cols="30" placeholder="Message" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback mb-2">
+                        Please provide your Message.
+                    </div>
+                </div>
+                <div class="submit-button-wrapper">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- <script>
+    function sendEmail() {
+        Email.send({
+            SecureToken: "12c36589-dfdc-43ae-9850-a074e8ff6815",
+            To: 'vishalguptaa2z111@gmail.com',
+            From: document.getElementById("email").value,
+            Subject: "This is the subject",
+            Body: "And this is the body"
+        }).then(
+            message => alert(message)
+        );
+    }
+</script> -->

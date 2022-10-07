@@ -1,0 +1,73 @@
+<% layout("layout/boilerplate") %>
+
+    <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+
+    <script src="https://vjs.zencdn.net/7.20.2/video.min.js" defer></script>
+    <script src="/javascripts/Youtube.min.js" defer></script>
+
+    <div style="margin: 9%">
+        <!-- <div class="d-flex align-items-center" style="margin-top: 20px; padding-top: 100px">
+            <div class="pName">
+                <h1 class="big-heading bold-font text-start">
+                    <%= project.title %>
+                </h1>
+            </div>
+            <div class="ms-auto d-flex ">
+                <a title="Live Demo" class="btn btn-primary mx-1 flex-grow-1" href="/Piknip"
+                    style="text-decoration: none">Live Demo</a>
+                <a title="Github" class="btn btn-primary mx-1" href="/Piknip"
+                    style="text-decoration: none; border-radius: 50%; align-self:baseline;"><i
+                        class="fa-brands fa-github fa-xl"></i></a>
+            </div>
+        </div> -->
+
+        <div class="container " style="margin-top: 20px; padding-top: 100px">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6 col-sm-12 col-12 pName">
+                    <h1 class="big-heading bold-font text-start">
+                        <%= project.title %>
+                    </h1>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12 d-flex mt-2 mt-md-0 mt-sm-2">
+                    <div class="ms-md-auto ">
+                        <a title="Live Demo" class="btn btn-primary mx-1 flex-grow-1" href="<%= project.liveSiteURL %>"
+                            style="text-decoration: none" target="_blank">Live Demo</a>
+                        <a title="Github" class="btn btn-primary mx-1" href="<%= project.repoLink %>"
+                            style="text-decoration: none; border-radius: 50%; align-self:baseline;" target="_blank"><i
+                                class="fa-brands fa-github fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-5">
+            <div class="row d-flex flex-wrap">
+                <div class="text-start col-md-6 col-sm-12 col-12">
+                    <div>
+                        <h3 class="pHeading">Idea</h3>
+                    </div>
+
+                       <pre style="font-family: 'Montserrat'; font-weight: 400;" class="text-start pName"><%= project.Description %></pre> 
+
+
+                    <h3 class="pHeading">Core Technologies</h3>
+                    <ul class="pName" style="font-weight: 400">
+                        <% project.Technologies.forEach(tech=>{ %>
+                            <li>
+                                <%= tech %>
+                            </li>
+                            <% }) %>
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                    <!-- Video functionality fully working
+                    Videos will be aded later to each project. -->
+                    <!-- <video id="vid1" class="video-js vjs-theme-fantasy col-md-12 col-sm-12 col-12 my-2 rounded"
+                        height="280px" controls
+                        data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=U7itlR6qESM"}] }'></video> -->
+                    <img src=<%= project.image %> class="img-fluid rounded-start" alt="..." />
+                </div>
+            </div>
+        </div>
+    </div>
